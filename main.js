@@ -71,6 +71,7 @@ $(document).ready(function() {
   );
 
   // Функция валидации и вывода сообщений
+  
   function valEl(el) {
       el.validate({
           rules: {
@@ -102,6 +103,7 @@ $(document).ready(function() {
           },
 
           // Начинаем проверку id="" формы
+        
           submitHandler: function(form) {
               $('#loader').fadeIn();
               var $form = $(form);
@@ -155,7 +157,6 @@ $(document).ready(function() {
                                 $('#message-for-user').on('click', function(e) {
                                     $(this).fadeOut();
                                 });
-  
                             });
                         break;
                         case 'form-modal':
@@ -180,7 +181,6 @@ $(document).ready(function() {
                                   $('#message-for-user').on('click', function(e) {
                                       $(this).fadeOut();
                                   });
-    
                               });
                           break;
               }
@@ -190,16 +190,17 @@ $(document).ready(function() {
   }
 
   // Запускаем механизм валидации форм, если у них есть класс .js-form
+  
   $('.js-form').each(function() {
       valEl($(this));
   });
-  
 });
 
 (function ($)
   { "use strict"
   
-/* 1. Preloder (готовый код, можно использовать в любом проекте) */
+/* 1. Preloder */
+   
     $(window).on('load', function () {
       $('#preloader-active').delay(450).fadeOut('slow');
       $('body').delay(450).css({
@@ -208,6 +209,7 @@ $(document).ready(function() {
     });
 
 /* 2. Sticky And Scroll UP */
+   
     $(window).on('scroll', function () {
       var scroll = $(window).scrollTop();
       if (scroll < 400) {
@@ -220,6 +222,7 @@ $(document).ready(function() {
     });
 
   // Scroll Up
+   
     $('#back-top a').on("click", function () {
       $('body,html').animate({
         scrollTop: 0
